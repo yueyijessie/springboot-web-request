@@ -5,6 +5,7 @@ import com.example.springbootwebrequest.pojo.Result;
 import com.example.springbootwebrequest.service.EmpService;
 import com.example.springbootwebrequest.service.impl.EmpServiceA;
 import com.example.springbootwebrequest.utils.XmlParserUtils;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ public class EmpController {
     // 解耦，需要删掉new的对象
     // private EmpService empService = new EmpServiceA();
     @Autowired // 运行时，IOC容器会提供该类型的bean对象，并复制给该变量 -- 依赖注入
+//    @Resource(name = "empServiceB")
     private EmpService empService;
 
     @RequestMapping("/listEmp")
