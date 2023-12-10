@@ -12,7 +12,7 @@
 - json参数，`@RequestBody`封装
 - 路径参数， `@PathVariable`获取路径参数
 
-[Request Controller](./src/main/java/com/example/springbootwebrequest/controller/RequestController)
+[Request Controller](src/main/java/com/example/springbootwebrequest/controller/RequestController.java)
 
 
 
@@ -22,9 +22,9 @@
 - 状态码信息：给页面的提示信息
 - 返回的数据：给前端响应的数据（字符串、对象、集合）
 
-[Response Controller](./src/main/java/com/example/springbootwebrequest/controller/ResponseController)
+[Response Controller](src/main/java/com/example/springbootwebrequest/controller/ResponseController.java)
 
-[Result](./src/main/java/com/example/springbootwebrequest/pojo/Result)
+[Result](src/main/java/com/example/springbootwebrequest/pojo/Result.java)
 
 
 
@@ -52,8 +52,8 @@ IOC容器中创建、管理的对象，称之为：**bean对象**
 **依赖注入 Dependency Injection**，简称DI。容器为应用程序提供运行时，所依赖的资源， 称之为依赖注入。
 - `@Autowired` 运行时,从IOC容器中获取该类型对象,赋值给该变量
 - 存在多个相同类型的bean对象
-    - 使用`@Primary`注解，让当前bean生效 [EmpServiceB](./src/main/java/com/example/springbootwebrequest/service/impl/EmpServiceB)
-    - 使用`@Resource`注解，通过name属性指定要注入的bean的名称 [EmpController](./src/main/java/com/example/springbootwebrequest/controller/EmpController)
+    - 使用`@Primary`注解，让当前bean生效 [EmpServiceB](src/main/java/com/example/springbootwebrequest/service/impl/EmpServiceB.java)
+    - 使用`@Resource`注解，通过name属性指定要注入的bean的名称 [EmpController](src/main/java/com/example/springbootwebrequest/controller/EmpController.java)
     - 二者区别：
         - @Autowired 是spring框架提供的注解，而@Resource是JDK提供的注解
         - @Autowired 默认是按照类型注入，而@Resource是按照名称注入
